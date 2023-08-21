@@ -1,1 +1,5 @@
+
 # Sentiment_Analysis_IMdb_Reviews
+First Install the dependencies using 'pip install -r requirements.txt' then first do the training then test.
+# Explaination:
+This code performs sentiment analysis using the BERT (Bidirectional Encoder Representations from Transformers) model on the IMDb movie review dataset. The dataset is loaded using TensorFlow's Keras, consisting of movie reviews labeled as positive or negative. The reviews are preprocessed, padded or truncated to a fixed length, and converted into PyTorch tensors. A DataLoader is set up for batch training. The BERT pre-trained model and tokenizer are loaded from the 'bert-base-uncased' version. The optimizer (AdamW) and learning rate scheduler (linear schedule with warm-up) are configured. The training loop iterates through batches of data, moves them to the available device (GPU if available), computes the model's forward pass, calculates the loss, performs backpropagation, optimizer step, and updates the scheduler. Losses are stored and averaged for each epoch, and the loss per training step is plotted. Finally, the trained model and tokenizer are saved for later use in sentiment analysis tasks.
